@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 기본 mapper -->
+<mapper namespace="sessionUser">
+	<insert id="s_join" parameterType="com.ict.db.session.SessionVO">
+		insert into userMember(idx, id, pwd, name, email, addr, phone, regdate)
+		values(userMember_seq.nextval, #{id}, #{pwd}, #{name}, #{email}, #{addr}, #{phone}, sysdate)
+	</insert>
+	<select id="s_login" parameterType="com.ict.db.session.SessionVO" resultType="com.ict.db.session.SessionVO">
+		select * from userMember where id=#{id} and pwd=#{pwd}
+	</select>
+	<select id="_detail" parameterType="String" resultType="com.ict.db.session.SessionVO">
+		select * from userMember where id=#{id}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

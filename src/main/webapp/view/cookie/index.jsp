@@ -14,7 +14,7 @@
 </head>
 <body>
 	
-	<c:if test="${res == null}">
+	<c:if test="${res == null}"><!-- 로그인 실패 -->
 	<form action="/02_login/CookieController" method="post" class="form">
 		<input type="submit" value="로그인">
 		<input type="hidden" name="cmd" value="c_login">	
@@ -24,7 +24,7 @@
 		<input type="hidden" name="cmd" value="c_join">	
 	</form>
 	</c:if>
-	<c:if test="${res == 1}">
+	<c:if test="${res == 1}"><!-- 로그인 성공 -->
 	<span class="form">${cvo.name}님 환영합니다.</span>
 	<form action="/02_login/CookieController" method="post" class="form">
 		<input type="submit" value="로그아웃">

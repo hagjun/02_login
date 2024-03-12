@@ -1,9 +1,11 @@
-package com.ict.model.cookie;
+package com.ict.model.session;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class CookieJoinCommand implements Command{
+import com.ict.model.cookie.Command;
+
+public class SessionCommand implements Command{
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		
