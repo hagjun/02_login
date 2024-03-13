@@ -15,10 +15,10 @@
 	주의사항) 이클립스로 실행해서 업로드하면 실제 파일 위치는 가상 톰캣에 저장된다.
 	       실제로 프로젝트에서는 원하는 위치에 저장할 수 있다.
 --%>
-	<form action="/02_login/FileUpController" method="post" enctype="multipart/form-date">
-		<p>올린사람 : <input type="text" name="name"></p>
-		<p>첨부파일 : <input type="file" name="f_name"></p>
-		<input type="submit" value="업로드"> 
-	</form>
+	<form action="/02_login/FileUpController" method="post" enctype="multipart/form-data">
+ 		<p>올린사람 : <input type="text" name="name"></p>
+ 		<p>첨부파일 : <input type="file" name="f_name"></p>
+ 		<input type="submit" value="업로드">
+ 	</form>
 </body>
 </html>
